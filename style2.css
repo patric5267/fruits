@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Bodoni&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Libre Bodoni', serif;
+}
+
+.container {
+    position: fixed;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.inner-container {
+    /* border: 1px solid green; */
+    height: 22rem;
+    width: 50rem;
+    display: flex;
+    gap: 2rem;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    scroll-behavior: smooth;
+}
+
+.content-box {
+    min-width: 14rem;
+    height: 100%;
+    border-radius: 2%;
+    box-shadow: 0 0 10px wheat;
+}
+
+.content-img {
+    width: 100%;
+    height: 50%;
+}
+
+.content-description {
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: start;
+    padding: 10px;
+    justify-content: space-evenly;
+}
+.content-description h2{
+    
+    font-size: 1rem;
+}
+.content-description p{
+    font-size: 1rem;
+   
+    word-break: break-all;
+}
+.content-img img {
+    height: 100%;
+    width: 100%;
+
+}
+
+.arrow {
+
+    background-color: rgb(197, 17, 197);
+    position: absolute;
+    top: 50%;
+    border-radius: 50%;
+    z-index: 4;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 900;
+    cursor: pointer;
+    padding: 7px;
+}
+
+.outer-container {
+    position: relative;
+    /* border: 1px solid red; */
+    
+  
+}
+@media screen and (max-width:858px) {
+    .inner-container {
+        /* border: 1px solid red; */
+        height: 22rem;
+        width: 40rem;
+    }    
+}
+@media screen and (max-width:690px) {
+    .inner-container {
+        /* border: 1px solid red; */
+        height: 22rem;
+        width: 30rem;
+    }    
+}
+@media screen and (max-width:520px) {
+    .outer-container {
+        width: 90%;
+        height: 90%;
+    }
+    .inner-container {
+
+        width: 100%;
+        height: 100%;
+    }
+
+    .content-box {
+        min-width: 100%;
+    }
+}
